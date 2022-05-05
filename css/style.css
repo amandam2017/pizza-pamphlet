@@ -1,0 +1,79 @@
+
+body {
+    background-color: #335C67;
+    /* font-family: arial, sans-serif; */
+    /* background-color: #3FA9E2; */
+    /* font-size: 0.75em; */
+  }
+
+  .hearder__section{
+      margin: 50px 0;
+  }
+
+  h1{
+      text-align: center;
+  }
+  
+  .small {
+    background-color: #9E2A2B;
+    
+    
+  }
+  
+  .medium {
+    background-color: #E09F3E;
+  }
+  
+  .large {
+    background-color: #FFF3B0;
+    flex : 2;
+  }
+  
+  .specials div {
+    text-align: center;
+    margin: 0em;
+    padding: 1em;
+    
+  }
+  
+  .small img {
+    width: 4em;
+  }
+  
+  .medium img {
+    width: 5em;
+  }
+  
+  
+  .large img {
+    width: 7em;
+    
+  }
+  
+ .footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+ }
+  
+  
+  @media (min-width: 768px){
+  
+    .specials {
+      display: flex;
+    }
+    
+    body {
+      font-size: 1em;
+    }
+    
+  }
+
+  /* @mycolors */
+  /* text 335C67 && 9E2A2B &&540B0E
+  background FFF3B0 && E09F3E  */
+  
+  
+  
