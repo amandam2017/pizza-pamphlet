@@ -1,0 +1,167 @@
+
+body {
+    background-color: #335C67;
+  }
+
+  .btn-style{
+    width: 25px;
+    height:25px;
+    background-color: #FFF3B0;
+    border-radius: 50%;
+  }
+
+  #hidden{
+    display: none;
+  }
+
+  .cart{
+    background-color: greenyellow;
+    border: 1px solid;
+    /* width: 150px; */
+  }
+
+  .hearder__section{
+      margin: 50px 0;
+  }
+
+  h1{
+      text-align: center;
+  }
+  
+  .small {
+    background-color: #9E2A2B;
+    
+    
+  }
+  
+  .medium {
+    background-color: #E09F3E;
+  }
+  
+  .large {
+    background-color: #FFF3B0;
+    flex : 2;
+  }
+  
+  .specials div {
+    text-align: center;
+    margin: 0em;
+    padding: 1em;
+    
+  }
+
+ ul{
+  margin: 0;
+  /* padding: 0; */
+ }
+
+ .cart h4{
+   font-size: 18px;
+ }
+  
+  .small img {
+    width: 4em;
+  }
+  
+  .medium img {
+    width: 5em;
+  }
+  
+  
+  .large img {
+    width: 7em;
+    
+  }
+  
+ .footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+ }
+  
+  
+  @media (min-width: 768px){
+  
+    .specials {
+      display: flex;
+    }
+    
+    body {
+      font-size: 1em;
+    }
+    
+  }
+
+  /* @mycolors */
+  /* text 335C67 && 9E2A2B &&540B0E
+  background FFF3B0 && E09F3E  */
+  
+  .cart {
+		/* position: fixed; */
+		width: 100%;
+		/* margin: auto; */
+		/* width: 40%; */
+		/* min-height: 15em; */
+		background-color: #CDD93F;
+		top: 0em;
+		right: 0em;
+		margin-right: 1em;
+		padding: 1em;
+		/* border: 0.1em solid; */
+		border-radius: 0.25em;
+		/* z-index: 1000; */
+	}
+
+	.cartTotal {
+		position: fixed;
+		/* width: 100%; */
+		/* margin: auto; */
+		width: 20%;
+		/* min-height: 15em; */
+		background-color: #CDD93F;
+		top: 0em;
+		right: 0em;
+		margin-right: 1em;
+		padding: 1em;
+		/* border: 0.1em solid; */
+		border-radius: 0.25em;
+		/* z-index: 1000; */
+	}
+
+	.cart table {
+		border-collapse: collapse;
+	}
+	
+	.cart table {
+		border-collapse: collapse;
+		width: 100%;
+	}
+
+	.cart td {
+		border-top: 1px solid snow;
+	} 
+
+	.cart th, td {
+		padding: 15px;
+		text-align: left;
+	}
+
+	.cart img {
+		width: 2em;
+	}
+
+	.cart h3 {
+		/* text-decoration: underline; */display: inline;
+	}
+
+	.cartTotal {
+		padding: 1em;
+	}
+
+	.cartTotal img {
+		/* padding: 1em; */
+		width: 2em;
+	}
+  

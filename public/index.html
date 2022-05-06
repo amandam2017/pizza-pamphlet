@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Pizza Pamphlet</title>
+  <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+  <script src="https://kit.fontawesome.com/059757b1b7.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="hearder__section">
+        <h1>Perfect Pizza</h1>
+    </div>
+    <div class="row">
+      <!-- <div class="cart" id="hidden">
+        <h4>Item Summary</h4>
+        <ul>
+          <li>Size</li>
+          <li>Total</li>
+          <li>Overall</li>
+        </ul>
+          <div x-data="{ qty: 0}">
+              <p x-text="qty">THis is my cart</p>
+              <button class="btn-style" @click="qty++">
+                  <i class="fa-solid fa-plus"></i>
+              </button>
+              <button class="btn-style" @click="qty--">
+                  <i class="fa-solid fa-minus"></i>
+              </button>
+          </div>    
+      </div> -->
+
+      <div class="cart" id="hidden">
+        <h3>Shopping Cart</h3>
+        <i class="fa-solid fa-cart-minus"></i>
+  
+          <table>
+            <tr>
+            <th>Type</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Action</th>
+
+            </tr>
+            <tr>
+              <td><strong>Small pizzas total:</strong></td>
+              <td><span class="smallTotalPrice">0.00</span></td>
+              <td><span class="smallTotalPrice">0</span></td>
+              <td><span class="smallTotalPrice">0.00</span></td>
+            </tr>
+  
+            <tr>
+              <td><strong>Medium pizzas total:</strong></td>
+              <td><span class="mediumTotalPrice">0.00</span></td>
+            </tr>
+            <tr>
+              <td><strong>Large pizza total:</strong></td>
+              <td><span class="largeTotalPrice">0.00</span></td>
+            </tr>
+            <tr>
+              <td><strong>Total price</strong></td>
+              <td><span class="totalPrice">0.00</span></td>
+            </tr>
+          </table>
+      </div>
+    </div>
+    <div class="row specials">
+        <div class="col-md-4 medium">
+          <img  src="https://image.shutterstock.com/image-vector/italian-pizza-tomato-sausage-olive-600w-554691619.jpg" alt="">
+          <h2>Medium Pizza</h2>
+          <h3>R78.99</h3>
+          <i>
+            medium margeritha pizza with 3 toppings max.
+            2 or less meat topping.
+            3 or less other toppings.
+          </i>
+          <button type="button" class="buy-medium btn btn-dark">Buy Pizza</button>
+          
+        </div>
+        <div class="col-md-4 large">
+          <img  src="https://image.shutterstock.com/image-vector/italian-pizza-tomato-sausage-olive-600w-554691619.jpg" alt="">
+          <h2>Large Pizza</h2>
+          <h3>R114.99</h3>
+            <i>
+            large margeritha pizza with 3 toppings max.
+            3 meat toppings max.
+            3 or less other toppings.
+          </i>
+          <button type="button" class="buy-large btn btn-dark">Buy Pizza</button>
+        </div>
+        <div class="col-md-4 small">
+          <img  src="https://image.shutterstock.com/image-vector/italian-pizza-tomato-sausage-olive-600w-554691619.jpg" alt="">
+          <h2>Small Pizza</h2>
+          <h3>R48.99</h3>
+          <i>
+            <ul>
+              <li>small pizza with 3 toppings</li>
+              <li>1 meat topping.</li>
+              <li>3 or less other toppings.</li>
+            </ul>
+          </i>
+          <button type="button" class="buy-small btn btn-dark">Buy Pizza</button>
+        </div>
+    </div>
+    
+    <footer class="footer bg-light text-center text-lg-start">
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    <strong>Contact us at:</strong>(021)-541-1000
+    <strong>twitter /fb /insta</strong><a class="text-dark" href="@perfectpizza">@perfectpizza</a>
+  </div>
+</footer>
+  </div>
+  <script src="./js/cart.js"></script>
+</body>
+</html>
