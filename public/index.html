@@ -49,8 +49,16 @@
             <tr>
               <td><strong>Small pizzas total:</strong></td>
               <td><span class="smallTotalPrice">0.00</span></td>
-              <td><span class="smallTotalPrice">0</span></td>
-              <td><span class="smallTotalPrice">0.00</span></td>
+              <td><span class="smallTotalPrice">1</span></td>
+              <td><div x-data="{ qty: 0}">
+                <p x-text="qty">THis is my cart</p>
+                <button class="btn-style" @click="qty++">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <button class="btn-style" @click="qty--">
+                    <i class="fa-solid fa-minus"></i>
+                </button>
+            </div> </td>
             </tr>
   
             <tr>
