@@ -22,18 +22,18 @@
       <div class="row">
 
         <div class="cart" x-show="show()">
-        <div class="row">
-          <div class="col-md-6">
-          <h3>Shopping Cart</h3>
-          </div>
-          <div class="col-md-6">
-            <div class="checkoutBtnContainer">
-              <button class="checkoutBtn btn btn-warning">Checkout
-                <!-- <i class="fa-solid fa-cart-shopping"></i> -->
-              </button>
+          <div class="row">
+            <div class="col-md-6">
+              <h3>Shopping Cart</h3>
+            </div>
+            <div class="col-md-6">
+              <div class="checkoutBtnContainer">
+                <a href="./checkout.html" class="checkoutBtn btn btn-warning">Checkout
+                  <!-- <i class="fa-solid fa-cart-shopping"></i> -->
+                </a>
+              </div>
             </div>
           </div>
-        </div>
 
           <table>
             <tr>
@@ -96,12 +96,8 @@
             </tr>
           </table>
         </div>
-
-        <div class="checkout__section">
-          <h3>Order Summary</h3>
-          <th>Subtotal</th>
-        </div>
       </div>
+
       <div class="row specials">
         <div class="col-md-4 medium">
           <img src="https://image.shutterstock.com/image-vector/italian-pizza-tomato-sausage-olive-600w-554691619.jpg"
@@ -113,8 +109,8 @@
             2 or less meat topping.
             3 or less other toppings.
           </i>
-          <button type="button" class="buy-medium btn btn-dark"
-            @click="mediumTotalPrice+=78.99, mediumQty+=1">Buy Pizza</button>
+          <button type="button" class="buy-medium btn btn-dark" @click="mediumTotalPrice+=78.99, mediumQty+=1">Buy
+            Pizza</button>
 
         </div>
         <div class="col-md-4 large">
