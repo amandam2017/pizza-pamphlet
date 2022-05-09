@@ -15,27 +15,12 @@
     <div class="hearder__section">
         <h1>Perfect Pizza</h1>
     </div>
+    <div x-data="{smallTotalPrice: 0.00, mediumTotalPrice: 0.00, largeTotalPrice: 0.00}">
     <div class="row">
-      <!-- <div class="cart" id="hidden">
-        <h4>Item Summary</h4>
-        <ul>
-          <li>Size</li>
-          <li>Total</li>
-          <li>Overall</li>
-        </ul>
-          <div x-data="{ qty: 0}">
-              <p x-text="qty">THis is my cart</p>
-              <button class="btn-style" @click="qty++">
-                  <i class="fa-solid fa-plus"></i>
-              </button>
-              <button class="btn-style" @click="qty--">
-                  <i class="fa-solid fa-minus"></i>
-              </button>
-          </div>    
-      </div> -->
 
       <div class="cart" id="hidden">
         <h3>Shopping Cart</h3>
+
         <i class="fa-solid fa-cart-minus"></i>
   
           <table>
@@ -48,8 +33,9 @@
             </tr>
             <tr>
               <td><strong>Small pizzas total:</strong></td>
-              <td><span class="smallTotalPrice">0.00</span></td>
-              <td><span class="smallTotalPrice">1</span></td>
+
+              <td><span x-text="smallTotalPrice" class="smallTotalPrice">0.00</span></td>
+              <td><span class="smallQty">0</span></td>
               <td><div x-data="{ qty: 0}">
                 <p x-text="qty">THis is my cart</p>
                 <button class="btn-style" @click="qty++">
@@ -63,11 +49,11 @@
   
             <tr>
               <td><strong>Medium pizzas total:</strong></td>
-              <td><span class="mediumTotalPrice">0.00</span></td>
+              <td><span x-text="mediumTotalPrice" class="mediumTotalPrice">0.00</span></td>
             </tr>
             <tr>
               <td><strong>Large pizza total:</strong></td>
-              <td><span class="largeTotalPrice">0.00</span></td>
+              <td><span x-text="largeTotalPrice" class="largeTotalPrice">0.00</span></td>
             </tr>
             <tr>
               <td><strong>Total price</strong></td>
@@ -86,7 +72,7 @@
             2 or less meat topping.
             3 or less other toppings.
           </i>
-          <button type="button" class="buy-medium btn btn-dark">Buy Pizza</button>
+          <button type="button" class="buy-medium popCart btn btn-dark" @click="mediumTotalPrice+=78.99">Buy Pizza</button>
           
         </div>
         <div class="col-md-4 large">
@@ -98,7 +84,8 @@
             3 meat toppings max.
             3 or less other toppings.
           </i>
-          <button type="button" class="buy-large btn btn-dark">Buy Pizza</button>
+          <button type="button" class="buy-large popCart btn btn-dark" @click="largeTotalPrice+=114.99">Buy Pizza</button>
+
         </div>
         <div class="col-md-4 small">
           <img  src="https://image.shutterstock.com/image-vector/italian-pizza-tomato-sausage-olive-600w-554691619.jpg" alt="">
@@ -111,7 +98,7 @@
               <li>3 or less other toppings.</li>
             </ul>
           </i>
-          <button type="button" class="buy-small btn btn-dark">Buy Pizza</button>
+          <button type="button" class="buy-small popCart btn btn-dark" @click="smallTotalPrice+=48.99">Buy Pizza</button>
         </div>
     </div>
     
@@ -121,6 +108,7 @@
     <strong>twitter /fb /insta</strong><a class="text-dark" href="@perfectpizza">@perfectpizza</a>
   </div>
 </footer>
+    </div>
   </div>
   <script src="./js/cart.js"></script>
 </body>

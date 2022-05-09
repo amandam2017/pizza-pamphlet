@@ -14,18 +14,13 @@ body {
     display: none;
   }
 
-  .cart{
-    background-color: greenyellow;
-    border: 1px solid;
-    /* width: 150px; */
-  }
-
   .hearder__section{
       margin: 50px 0;
   }
 
   h1{
       text-align: center;
+      border: 5px solid;
   }
   
   .small {
@@ -99,19 +94,9 @@ body {
   background FFF3B0 && E09F3E  */
   
   .cart {
-		/* position: fixed; */
-		width: 100%;
-		/* margin: auto; */
-		/* width: 40%; */
-		/* min-height: 15em; */
-		background-color: #CDD93F;
-		top: 0em;
-		right: 0em;
-		margin-right: 1em;
+    border: 1px solid grey;
 		padding: 1em;
-		/* border: 0.1em solid; */
 		border-radius: 0.25em;
-		/* z-index: 1000; */
 	}
 
 	.cartTotal {
