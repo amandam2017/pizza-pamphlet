@@ -3,6 +3,25 @@ body {
     background-color: #335C67;
   }
 
+  .cartbtn{
+    /* background-color: transparent; */
+    /* border: none; */
+  }
+
+  .checkoutBtnContainer{
+    position: relative;
+  }
+
+  .checkoutBtn{
+    position: absolute;
+    right: 0;
+  }
+
+  /* .cartbtn .fa-solid{
+    font-size: 45px;
+    color: beige;
+  } */
+
   .btn-style{
     width: 25px;
     height:25px;
@@ -10,9 +29,13 @@ body {
     border-radius: 50%;
   }
 
-  #hidden{
+  /* #hidden{
     display: none;
-  }
+  } */
+
+  /* #hiddenCheckout{
+    display: none;
+  } */
 
   .hearder__section{
       margin: 50px 0;

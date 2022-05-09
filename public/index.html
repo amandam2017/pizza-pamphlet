@@ -21,10 +21,19 @@
     <div x-data="pizzas">
       <div class="row">
 
-        <div class="cart" id="hidden">
+        <div class="cart" x-show="show()">
+        <div class="row">
+          <div class="col-md-6">
           <h3>Shopping Cart</h3>
-
-          <i class="fa-solid fa-cart-minus"></i>
+          </div>
+          <div class="col-md-6">
+            <div class="checkoutBtnContainer">
+              <button class="checkoutBtn btn btn-warning">Checkout
+                <!-- <i class="fa-solid fa-cart-shopping"></i> -->
+              </button>
+            </div>
+          </div>
+        </div>
 
           <table>
             <tr>
@@ -40,7 +49,7 @@
               <td><span x-text="smallTotalPrice.toFixed(2)" class="smallTotalPrice">0.00</span></td>
               <td><span x-text="smallQty" class="smallQty">0</span></td>
               <td>
-                <div x-data="{ action: 0}">
+                <div>
                   <button class="btn-style" @click="action++, smallQty+=1, smallTotalPrice+=48.99">
                     <i class="fa-solid fa-plus"></i>
                   </button>
@@ -55,17 +64,42 @@
               <td><strong>Medium pizzas total:</strong></td>
               <td><span x-text="mediumTotalPrice.toFixed(2)" class="mediumTotalPrice">0.00</span></td>
               <td><span x-text="mediumQty" class="mediumQty">0</span></td>
+              <td>
+                <div>
+                  <button class="btn-style" @click="action++, mediumQty+=1, mediumTotalPrice+=78.99">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                  <button class="btn-style" @click="action--, mediumQty-=1, mediumTotalPrice-=78.99">
+                    <i class="fa-solid fa-minus"></i>
+                  </button>
+                </div>
+              </td>
             </tr>
             <tr>
               <td><strong>Large pizza total:</strong></td>
               <td><span x-text="largeTotalPrice.toFixed(2)" class="largeTotalPrice">0.00</span></td>
               <td><span x-text="largeQty" class="largeQty">0</span></td>
+              <td>
+                <div>
+                  <button class="btn-style" @click="action++, largeQty+=1, largeTotalPrice+=78.99">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                  <button class="btn-style" @click="action--, largeQty-=1, largeTotalPrice-=78.99">
+                    <i class="fa-solid fa-minus"></i>
+                  </button>
+                </div>
+              </td>
             </tr>
             <tr>
               <td><strong>Total price</strong></td>
               <td><span x-text="totalPrice().toFixed(2)" class="totalPrice">0.00</span></td>
             </tr>
           </table>
+        </div>
+
+        <div class="checkout__section">
+          <h3>Order Summary</h3>
+          <th>Subtotal</th>
         </div>
       </div>
       <div class="row specials">
@@ -79,7 +113,7 @@
             2 or less meat topping.
             3 or less other toppings.
           </i>
-          <button type="button" class="buy-medium popCart btn btn-dark"
+          <button type="button" class="buy-medium btn btn-dark"
             @click="mediumTotalPrice+=78.99, mediumQty+=1">Buy Pizza</button>
 
         </div>
@@ -93,7 +127,7 @@
             3 meat toppings max.
             3 or less other toppings.
           </i>
-          <button type="button" class="buy-large popCart btn btn-dark" @click="largeTotalPrice+=114.99, largeQty+=1">Buy
+          <button type="button" class="buy-large btn btn-dark" @click="largeTotalPrice+=114.99, largeQty+=1">Buy
             Pizza</button>
 
         </div>
@@ -109,7 +143,7 @@
               <li>3 or less other toppings.</li>
             </ul>
           </i>
-          <button type="button" class="buy-small popCart btn btn-dark" @click="smallTotalPrice+=48.99, smallQty+=1">Buy
+          <button type="button" class="buy-small btn btn-dark" @click="smallTotalPrice+=48.99, smallQty+=1">Buy
             Pizza</button>
         </div>
       </div>
@@ -122,7 +156,8 @@
       </footer>
     </div>
   </div>
-  <script src="./js/cart.js"></script>
+  <!-- <script src="./js/cart.js"></script> -->
+  <!-- <script src="./js/checkout.js"></script> -->
 </body>
 
 </html>
