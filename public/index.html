@@ -37,7 +37,7 @@
             <tr>
               <td><strong>Small pizzas total:</strong></td>
 
-              <td><span x-text="smallTotalPrice" class="smallTotalPrice">0.00</span></td>
+              <td><span x-text="smallTotalPrice.toFixed(2)" class="smallTotalPrice">0.00</span></td>
               <td><span x-text="smallQty" class="smallQty">0</span></td>
               <td>
                 <div x-data="{ action: 0}">
@@ -53,17 +53,17 @@
 
             <tr>
               <td><strong>Medium pizzas total:</strong></td>
-              <td><span x-text="mediumTotalPrice" class="mediumTotalPrice">0.00</span></td>
+              <td><span x-text="mediumTotalPrice.toFixed(2)" class="mediumTotalPrice">0.00</span></td>
               <td><span x-text="mediumQty" class="mediumQty">0</span></td>
             </tr>
             <tr>
               <td><strong>Large pizza total:</strong></td>
-              <td><span x-text="largeTotalPrice" class="largeTotalPrice">0.00</span></td>
+              <td><span x-text="largeTotalPrice.toFixed(2)" class="largeTotalPrice">0.00</span></td>
               <td><span x-text="largeQty" class="largeQty">0</span></td>
             </tr>
             <tr>
               <td><strong>Total price</strong></td>
-              <td><span x-text="totalPrice()" class="totalPrice">0.00</span></td>
+              <td><span x-text="totalPrice().toFixed(2)" class="totalPrice">0.00</span></td>
             </tr>
           </table>
         </div>
