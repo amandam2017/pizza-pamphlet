@@ -23,8 +23,11 @@
 
         <div class="cart" x-show="show()">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 shoppingCart">
               <h3>Shopping Cart</h3>
+                <span x-text="cartItems()" class="totalQty">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </span>
             </div>
             <div class="col-md-6">
               <div class="checkoutBtnContainer">
@@ -81,10 +84,10 @@
               <td><span x-text="largeQty" class="largeQty">0</span></td>
               <td>
                 <div>
-                  <button class="btn-style" @click="action++, largeQty+=1, largeTotalPrice+=78.99">
+                  <button class="btn-style" @click="action++, largeQty+=1, largeTotalPrice+=114.99">
                     <i class="fa-solid fa-plus"></i>
                   </button>
-                  <button class="btn-style" @click="action--, largeQty-=1, largeTotalPrice-=78.99">
+                  <button class="btn-style" @click="action--, largeQty-=1, largeTotalPrice-=114.99">
                     <i class="fa-solid fa-minus"></i>
                   </button>
                 </div>
@@ -109,8 +112,10 @@
             2 or less meat topping.
             3 or less other toppings.
           </i>
-          <button type="button" class="buy-medium btn btn-dark" @click="mediumTotalPrice+=78.99, mediumQty+=1">Buy
-            Pizza</button>
+          <div class="btn__container">
+            <button type="button" class="buy-medium btn btn-dark" @click="mediumTotalPrice+=78.99, mediumQty+=1">Buy
+              Pizza</button>
+          </div>
 
         </div>
         <div class="col-md-4 large">
@@ -123,8 +128,10 @@
             3 meat toppings max.
             3 or less other toppings.
           </i>
-          <button type="button" class="buy-large btn btn-dark" @click="largeTotalPrice+=114.99, largeQty+=1">Buy
-            Pizza</button>
+          <div class="btn__container">
+            <button type="button" class="buy-large btn btn-dark" @click="largeTotalPrice+=114.99, largeQty+=1">Buy
+              Pizza</button>
+          </div>
 
         </div>
         <div class="col-md-4 small">
@@ -139,8 +146,10 @@
               <li>3 or less other toppings.</li>
             </ul>
           </i>
-          <button type="button" class="buy-small btn btn-dark" @click="smallTotalPrice+=48.99, smallQty+=1">Buy
-            Pizza</button>
+          <div class="btn__container">
+            <button type="button" class="buy-small btn btn-dark" @click="smallTotalPrice+=48.99, smallQty+=1">Buy
+              Pizza</button>
+          </div>
         </div>
       </div>
 

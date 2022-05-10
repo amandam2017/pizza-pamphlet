@@ -14,6 +14,10 @@ document.addEventListener('alpine:init', () => {
             console.log(this.smallTotalPrice)
             return this.smallTotalPrice + Number(this.mediumTotalPrice) + Number(this.largeTotalPrice)
         },
+        cartItems(){
+            return this.smallQty + this.mediumQty + this.largeQty
+
+        },
         addSmall(){
              this.smallQty++
         }
