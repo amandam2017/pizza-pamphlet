@@ -47,13 +47,12 @@ h1 {
 }
 
 .small {
-  background-color: #9E2A2B;
-
+  background-color: #ddddac;
 
 }
 
 .medium {
-  background-color: #E09F3E;
+  background-color: #e3b878;;
 }
 
 .large {
@@ -89,16 +88,19 @@ ul {
 }
 
 .small img {
-  width: 4em;
+  width: 50%;
 }
 
 .medium img {
-  width: 5em;
+  width: 50%;
 }
 
+li{
+  list-style-type: none;
+}
 
 .large img {
-  width: 7em;
+  width: 58%;
 
 }
 
@@ -107,6 +109,7 @@ ul {
 }
 
 .footer {
+  margin-top: 50px;
   position: fixed;
   left: 0;
   bottom: 0;

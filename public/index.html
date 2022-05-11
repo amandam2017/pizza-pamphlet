@@ -31,9 +31,9 @@
             </div>
             <div class="col-md-6">
               <div class="checkoutBtnContainer">
-                <a href="./checkout.html" class="checkoutBtn btn btn-dark">Checkout
+                <button class="checkoutBtn btn btn-dark">Checkout
                   <!-- <i class="fa-solid fa-cart-shopping"></i> -->
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -53,10 +53,10 @@
               <td><span x-text="smallQty" class="smallQty">0</span></td>
               <td>
                 <div>
-                  <button class="btn-style" @click="action++, smallQty+=1, smallTotalPrice+=48.99">
+                  <button class="btn-style" @click="smallQtyUp(), smallPriceUp()">
                     <i class="fa-solid fa-plus"></i>
                   </button>
-                  <button class="btn-style" @click="action--, smallQty-=1, smallTotalPrice-=48.99">
+                  <button class="btn-style" @click="smallQtyDown(), smallPriceDown()">
                     <i class="fa-solid fa-minus"></i>
                   </button>
                 </div>
@@ -69,10 +69,10 @@
               <td><span x-text="mediumQty" class="mediumQty">0</span></td>
               <td>
                 <div>
-                  <button class="btn-style" @click="action++, mediumQty+=1, mediumTotalPrice+=78.99">
+                  <button class="btn-style" @click="medQtyUp(), medPriceUp()">
                     <i class="fa-solid fa-plus"></i>
                   </button>
-                  <button class="btn-style" @click="action--, mediumQty-=1, mediumTotalPrice-=78.99">
+                  <button class="btn-style" @click="medQtyDown(), medPriceDown()">
                     <i class="fa-solid fa-minus"></i>
                   </button>
                 </div>
@@ -84,10 +84,10 @@
               <td><span x-text="largeQty" class="largeQty">0</span></td>
               <td>
                 <div>
-                  <button class="btn-style" @click="action++, largeQty+=1, largeTotalPrice+=114.99">
+                  <button class="btn-style" @click="largeQtyUp(), largePriceUp()">
                     <i class="fa-solid fa-plus"></i>
                   </button>
-                  <button class="btn-style" @click="action--, largeQty-=1, largeTotalPrice-=114.99">
+                  <button class="btn-style" @click="largeQtyDown(), largePriceDown()">
                     <i class="fa-solid fa-minus"></i>
                   </button>
                 </div>
@@ -96,6 +96,7 @@
             <tr>
               <td><strong>Total price</strong></td>
               <td><span x-text="totalPrice().toFixed(2)" class="totalPrice">0.00</span></td>
+              <td><span x-text="cartItems()" class="totalQty">0</span></td>
             </tr>
           </table>
         </div>
@@ -103,7 +104,7 @@
 
       <div class="row specials">
         <div class="col-md-4 medium">
-          <img src="https://image.shutterstock.com/image-vector/italian-pizza-tomato-sausage-olive-600w-554691619.jpg"
+          <img src="./images/pizz.png"
             alt="">
           <h2>Medium Pizza</h2>
           <h3>R78.99</h3>
@@ -113,13 +114,13 @@
             3 or less other toppings.
           </i>
           <div class="btn__container">
-            <button type="button" class="buy-medium btn btn-dark" @click="mediumTotalPrice+=78.99, mediumQty+=1">Buy
+            <button type="button" class="buy-medium btn btn-dark" @click="medQtyUp(), medPriceUp()">Buy
               Pizza</button>
           </div>
 
         </div>
         <div class="col-md-4 large">
-          <img src="https://image.shutterstock.com/image-vector/italian-pizza-tomato-sausage-olive-600w-554691619.jpg"
+          <img src="./images/pizz.png"
             alt="">
           <h2>Large Pizza</h2>
           <h3>R114.99</h3>
@@ -129,25 +130,23 @@
             3 or less other toppings.
           </i>
           <div class="btn__container">
-            <button type="button" class="buy-large btn btn-dark" @click="largeTotalPrice+=114.99, largeQty+=1">Buy
+            <button type="button" class="buy-large btn btn-dark" @click="largeQtyUp(), largePriceUp()">Buy
               Pizza</button>
           </div>
 
         </div>
         <div class="col-md-4 small">
-          <img src="https://image.shutterstock.com/image-vector/italian-pizza-tomato-sausage-olive-600w-554691619.jpg"
+          <img src="./images/pizz.png"
             alt="">
           <h2>Small Pizza</h2>
           <h3>R48.99</h3>
           <i>
-            <ul>
-              <li>small pizza with 3 toppings</li>
-              <li>1 meat topping.</li>
-              <li>3 or less other toppings.</li>
-            </ul>
+              small pizza with 3 toppings
+              1 meat topping.
+              3 or less other toppings.
           </i>
           <div class="btn__container">
-            <button type="button" class="buy-small btn btn-dark" @click="smallTotalPrice+=48.99, smallQty+=1">Buy
+            <button type="button" class="buy-small btn btn-dark" @click="smallPriceUp(), smallQtyUp()">Buy
               Pizza</button>
           </div>
         </div>
