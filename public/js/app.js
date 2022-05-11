@@ -12,7 +12,7 @@ document.addEventListener('alpine:init', () => {
         largeQty: 0,
         action: 0,
         enteredAmount: 0,
-        // successMessage,
+        successMessage: '',
         totalPrice() {
             // console.log(this.smallTotalPrice)
             return this.smallTotalPrice + Number(this.mediumTotalPrice) + Number(this.largeTotalPrice)
@@ -64,7 +64,7 @@ document.addEventListener('alpine:init', () => {
     },
     //***************ERRORS****************
         // SuccessMessage(){
-        //     this.successMessage = 'succesully'
+        //     this.successMessage== 'succesully';
         // }
     }))
 })

@@ -37,8 +37,7 @@
         <span style="color: green">You can proceed with your order</span>
       </p>
 
-      <p x-model="errorMessage"></p>
-      <button x-bind:disabled="enteredAmount < totalPrice()" class="checkoutBtn btn btn-dark" @click="SuccessMessage()">Checkout</button>
+      <button x-bind:disabled="enteredAmount < totalPrice()" class="checkoutBtn btn btn-dark" x-on:click="alert('You have successfully purchased!')">Checkout</button>
 
   </div> 
 
