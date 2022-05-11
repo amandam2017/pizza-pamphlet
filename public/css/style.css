@@ -219,25 +219,4 @@ form input {
 }
 
 
-/* 
-<template x-if="!checkout">
-    <button @click="checkout=!checkout">Checkout</button>
-</template>
-
-            <template x-if="!checkout">
-                <label>Amount recieved from customer: R<input type="number" min="0" step="0.01"
-                        x-model="paid" /></label>
-            </template>
-
-            <template x-if="paid == total && checkout">
-                <span>
-                    <div style="color: green;">
-                        Payment successful
-                    </div>
-                    <button @click="small=0; medium=0; large=0; checkout=false;">Complete Order</button>
-                </span>
-            </template>
- */
-
-
  
