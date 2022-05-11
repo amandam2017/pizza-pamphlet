@@ -19,20 +19,22 @@
       <h1>Perfect Pizza</h1>
     </div>
     <div x-data="pizzas">
-      <div class="row">    
-
-    <template x-if="totalPrice()">
-      <div class="payment">
+      <div class="row">  
+        
+      <div x-show="show()" class="payment" x-data="{enteredAmount:0}">
         <div class="payment checkout__section">
           <h3 style="border-bottom: 1px solid grey;">Order Summary</h3>
           Payable Amount:<p x-text="totalPrice().toFixed(2)" class="totalPrice"></p>
-          <label for="amount">Enter Amount</label>
-          <input type="number" step="0.01">
-        <button class="checkoutBtn btn btn-dark" @click="totalPrice() == '48.99'">Checkout</button>
+          <label for="enteredAmount">Enter Amount</label>
+          <input x-model="enteredAmount" type="number" step="0.01">
+          <p x-text="enteredAmount">
       </div>
-  </div>  
-  </template>
 
+      <p x-show="enteredAmount < totalPrice()">insufff funds</p>
+      <p x-show="enteredAmount < totalPrice()">insufff funds</p>
+      <button x-bind:disabled="enteredAmount < totalPrice()" class="checkoutBtn btn btn-dark" @click="totalPrice() == '48.99'">Checkout</button>
+
+  </div> 
 
         <div class="cart" x-show="show()">
           <div class="row">
@@ -176,8 +178,6 @@
       </footer>
     </div>
   </div>
-  <!-- <script src="./js/cart.js"></script> -->
-  <!-- <script src="./js/checkout.js"></script> -->
 </body>
 
 </html>

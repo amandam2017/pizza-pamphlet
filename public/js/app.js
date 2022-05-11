@@ -11,8 +11,9 @@ document.addEventListener('alpine:init', () => {
         mediumQty: 0, 
         largeQty: 0,
         action: 0,
+        enteredAmount: 0,
         totalPrice() {
-            console.log(this.smallTotalPrice)
+            // console.log(this.smallTotalPrice)
             return this.smallTotalPrice + Number(this.mediumTotalPrice) + Number(this.largeTotalPrice)
         },
         cartItems(){
@@ -59,6 +60,8 @@ document.addEventListener('alpine:init', () => {
     },
     largePriceDown(){
         this.largeTotalPrice-=114.99
-    }
+    },
+    //***************ERRORS****************
+        
     }))
 })

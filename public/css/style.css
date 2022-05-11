@@ -3,7 +3,12 @@ body {
 }
 
 .payment {
-  position: relative;
+  /* position: relative; */
+  margin-bottom: 25px;
+}
+
+.payment input{
+  border: 1px solid;
 }
 
 .btn__container {
