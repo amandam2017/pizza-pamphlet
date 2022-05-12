@@ -21,7 +21,7 @@
     <div x-data="pizzas">
       <div class="row">  
         
-      <div x-show="show()" class="payment" x-data="{enteredAmount:0, errorMessage: 'amount too low'}">
+      <div x-show="show()" class="payment" x-data="{enteredAmount:0}">
         <div class="payment checkout__section">
           <h3 style="border-bottom: 1px solid grey;">Order Summary</h3>
           Payable Amount:<p x-text="totalPrice().toFixed(2)" class="totalPrice"></p>
@@ -34,10 +34,12 @@
         <span style="color: red">Insufficient funds</span>
       </p>
       <p x-show="enteredAmount >= totalPrice()">
-        <span style="color: green">You can proceed with your order</span>
+        <span style="color: orange">You can proceed with your order</span>
       </p>
-
-      <button x-bind:disabled="enteredAmount < totalPrice()" class="checkoutBtn btn btn-dark" x-on:click="alert('You have successfully purchased!')">Checkout</button>
+      <div x-data="{show: false}">
+      <button x-bind:disabled="enteredAmount < totalPrice()" class="checkoutBtn btn btn-dark" @click="show=!show">Checkout</button>
+        <div style="color: green" x-show="show">Purchase Successful</div>
+      </div>
 
   </div> 
 

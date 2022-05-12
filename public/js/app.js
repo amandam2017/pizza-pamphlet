@@ -63,8 +63,8 @@ document.addEventListener('alpine:init', () => {
         this.largeTotalPrice-=114.99
     },
     //***************ERRORS****************
-        // SuccessMessage(){
-        //     this.successMessage== 'succesully';
-        // }
+        SuccessMessage(){
+            this.successMessage== 'succesully';
+        }
     }))
 })
